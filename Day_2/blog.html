@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css"
+    />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <h1>Todo List</h1>
+    <h2>Bước 1: Tạo cấu trúc HTML</h2>
+    <p>Trước tiên, chúng ta cần tạo một file index.html với cấu trúc cơ bản.</p>
+    <pre><code class="lang-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;vi&quot;&gt;
+    &lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Todo List&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;todo-container&quot;&gt;
+    &lt;h1&gt;📝 Danh sách công việc&lt;/h1&gt;
+    &lt;input type=&quot;text&quot; id=&quot;todo-input&quot; placeholder=&quot;Nhập công việc...&quot; /&gt;
+    &lt;button id=&quot;add-btn&quot;&gt;Thêm&lt;/button&gt;
+    &lt;ul id=&quot;todo-list&quot;&gt;&lt;/ul&gt;
+&lt;/div&gt;
+      
+&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </code></pre>
+    <p><strong>Giải thích:</strong></p>
+    <ul>
+      <li>
+        <p>
+          <code class="lang-html">&lt;input&gt;</code> dùng để nhập nội dung
+          công việc.
+        </p>
+      </li>
+      <li>
+        <p>
+          <code class="lang-html">&lt;button&gt;</code> sẽ dùng để thêm công việc mới vào danh
+          sách.
+        </p>
+      </li>
+      <li>
+        <p><code class="lang-html">&lt;ul&gt;</code> là danh sách chứa các công việc.</p>
+      </li>
+      <li>
+        <p>
+          Kết nối file style.css để định dạng và script.js để xử lý logic
+          JavaScript.
+        </p>
+      </li>
+    </ul>
+    <h2>Bước 2: Thêm CSS cho giao diện</h2>
+    <p>Tạo file style.css để thiết kế một chút cho đẹp mắt.</p>
+    <pre><code class="lang-css">body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.todo-container {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 300px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #e9ecef;
+  padding: 10px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 4px;
+}
+
+li button {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+    </code></pre>
+    <p><strong>Giải thích</strong></p>
+    <ul>
+      <li>
+        <p>Giao diện được canh giữa và làm nổi bật với box-shadow.</p>
+      </li>
+      <li>
+        <p>
+          Các phần tử như input, button được làm đồng nhất và thân thiện với
+          người dùng.
+        </p>
+      </li>
+      <li>
+        <p>Mỗi công việc sẽ có nút xóa đi kèm.</p>
+      </li>
+    </ul>
+    <h2>Bước 3: Viết JavaScript xử lý logic</h2>
+    <p>Tạo file script.js để xử lý các hành động thêm và xóa công việc.</p>
+    <pre><code class="lang-js"">// Lấy các phần tử HTML
+const input = document.getElementById(&quot;todo-input&quot;);
+const addBtn = document.getElementById(&quot;add-btn&quot;);
+const list = document.getElementById(&quot;todo-list&quot;);
+
+// Hàm thêm công việc
+function addTodo() {
+  const todoText = input.value.trim();
+  if (todoText === &quot;&quot;) return;
+
+  // Tạo phần tử li mới
+  const li = document.createElement(&quot;li&quot;);
+  li.textContent = todoText;
+
+  // Tạo nút xóa
+  const deleteBtn = document.createElement(&quot;button&quot;);
+  deleteBtn.textContent = &quot;Xóa&quot;;
+  deleteBtn.onclick = function () {
+    list.removeChild(li);
+  };
+
+  // Thêm nút xóa vào li, và li vào danh sách
+  li.appendChild(deleteBtn);
+  list.appendChild(li);
+
+  // Xóa nội dung trong ô input
+  input.value = &quot;&quot;;
+}
+
+// Gán sự kiện khi click nút &quot;Thêm&quot;
+addBtn.addEventListener(&quot;click&quot;, addTodo);
+
+// Cho phép nhấn Enter để thêm công việc
+input.addEventListener(&quot;keypress&quot;, function (e) {
+  if (e.key === &quot;Enter&quot;) {
+    addTodo();
+  }
+});
+    </code></pre>
+    <p><strong>Giải thích</strong></p>
+    <ul>
+      <li>
+        <p>
+          Khi người dùng nhập nội dung và nhấn nút "Thêm" (hoặc Enter), hàm
+          <code class="lang-js">addTodo()</code> sẽ được gọi.
+        </p>
+      </li>
+      <li>
+        <p>
+          Hàm này sẽ tạo một thẻ <code class="lang-html">&lt;li&gt;</code> chứa nội dung công việc
+          và một nút "Xóa".
+        </p>
+      </li>
+      <li>
+        <p>Nút "Xóa" sẽ gỡ bỏ chính nó khỏi danh sách khi được nhấn.</p>
+      </li>
+      <li>
+        <p>Nội dung trong ô input sẽ được làm trống sau khi thêm thành công.</p>
+      </li>
+    </ul>
+    <h2>Kết quả</h2>
+    <p>Khi chạy ứng dụng, bạn có thể:</p>
+    <ul>
+      <li>
+        <p>Nhập công việc vào ô trống.</p>
+      </li>
+      <li>
+        <p>Nhấn <b>Thêm</b> hoặc phím <b>Enter</b> để thêm công việc.</p>
+      </li>
+      <li>
+        <p>Nhấn nút <b>Xóa</b> để loại bỏ công việc khỏi danh sách.</p>
+      </li>
+    </ul>
+    <h2>Tổng kết</h2>
+    <p>Dự án Todo List tuy đơn giản nhưng giúp bạn hiểu rõ cách:</p>
+    <ul>
+      <li>
+        <p>Tương tác với DOM trong JavaScript</p>
+      </li>
+      <li>
+        <p>Tạo và xoá phần tử HTML động</p>
+      </li>
+      <li>
+        <p>Kết hợp HTML + CSS + JS để tạo ứng dụng hoàn chỉnh</p>
+      </li>
+    </ul>
+    <p>Bạn có thể nâng cấp ứng dụng này bằng cách:</p>
+    <ul>
+      <li>
+        <p>Lưu danh sách vào <code>localStorage</code></p>
+      </li>
+      <li>
+        <p>Thêm chức năng chỉnh sửa công việc</p>
+      </li>
+      <li>
+        <p>Giao diện đẹp hơn với thư viện như Bootstrap hoặc Tailwind CSS</p>
+      </li>
+    </ul>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js"></script>
+  </body>
+</html>
