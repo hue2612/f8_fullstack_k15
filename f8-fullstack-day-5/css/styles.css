@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+/* Form */
 .register {
     background-color: rgb(223, 204, 221);
     min-height: 100px;
@@ -55,6 +56,52 @@
     border-radius: 50%
 }
 
+/* CV */
+ .cv {
+    max-width: 980px;
+    min-height: 120px;
+    padding: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(243, 235, 243);
+ }
+    .header {
+    text-align: center;
+   margin-top: 10px;
+   margin-bottom: 20px;
+    }
+    .header h1{
+        font-size: 30px;
+    font-weight: 900;
+    }
+    
+    h2 {
+     margin: 15px 0;
+    font-size: 17px;
+    font-weight: 600;
+    border-bottom: 2px solid black;
+    }
+    h3{
+    font-size: 15px;
+    font-weight: 550;
+    text-align: justify;
+    margin-top: 10px;
+
+    }
+     h3 span {
+        display: inline-block;
+     }
+    .full-whidth {
+        display: inline-block;
+        width: 100%;
+    }
+    ul {
+        padding: 0 20px;
+        list-style-type: disc;
+    }
+b {
+    font-weight: bold;
+}
 
 
 
