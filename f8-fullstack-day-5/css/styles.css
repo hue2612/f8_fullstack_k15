@@ -37,8 +37,8 @@
     display: inline;
 }
 
-.selector [type="checkbox"] {
-    display: inline;
+.selector-2 {
+    display: block;
 }
 
 .form-group .btn {
