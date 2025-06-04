@@ -206,32 +206,79 @@ a {
   height: 40px;
   padding: 8px;
   color: #fff;
+  background-color: #f26109;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.sidebar .icon-wifi svg {
+  width: 24px;
+  height: 24px;
   transform: rotate(45deg);
 }
 .icon-twitter {
   fill: #fff;
-  padding: 10px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
   background-color: #4da7de;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-twitter svg {
+  width: 24px;
+  height: 24px;
 }
 
 .icon-github {
   fill: #fff;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
   background-color: #000;
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.icon-github svg {
+  width: 24px;
+  height: 24px;
+}
+
 .icon-fb {
   fill: #fff;
-  background-color: #3b5998;
   width: 40px;
-
-  padding: 10px;
+  height: 40px;
+  padding: 8px;
+  background-color: #3b5998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.icon-fb svg {
+  width: 24px;
+  height: 24px;
+}
+
 .icon-in {
   fill: #fff;
   width: 40px;
-  padding: 10px;
+  height: 40px;
+  padding: 8px;
   background-color: #3371b7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-in svg {
+  width: 24px;
+  height: 24px;
 }
 .content-sidebar b {
   font-weight: bold;
