@@ -389,3 +389,7 @@ h4 {
     background-color: #fff;
     color: #b80257;
 }
+
+.home:hover {
+    color: #783df0;
+}
