@@ -72,7 +72,9 @@ h6 {
   min-height: 60px;
   margin-top: 40px;
 }
-
+.home:hover {
+  color: #783df0;
+}
 .header .logo {
   height: 34px;
 }
@@ -334,7 +336,6 @@ h6 {
 }
 .scholars {
   color: #fff;
-  /* width: 200px; */
   color: rgba(255, 255, 255, 0.6);
 }
 h4 {
@@ -365,12 +366,11 @@ h4 {
 .footer-input {
   padding: 10px 20px;
   width: 270px;
- height: 40px; 
- border: #464646;
- border-radius: 25px;
+  height: 40px;
+  border: #464646;
+  border-radius: 25px;
 
-  background: #272727; */
-  /* /* margin: 25px 0 10px 0;  */
+  background: #272727;
 }
 .footer-button {
   margin-top: 10px;
@@ -386,10 +386,6 @@ h4 {
 }
 
 .footer-button:hover {
-    background-color: #fff;
-    color: #b80257;
-}
-
-.home:hover {
-    color: #783df0;
+  background-color: #fff;
+  color: #b80257;
 }
