@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700|Source+Sans+Pro:300,400,600,700");
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  --font-heading: "PT Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-style: inherit;
+}
+
+button {
+  color: inherit;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+/* common */
+.container {
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top-page {
+  display: flex;
+  min-height: 496px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../img/bg-banner.jpg) no-repeat center / cover,
+    url(../img/bg-banner.jpg) no-repeat center / cover;
+}
+
+.top-page .inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+  margin-top: 40px;
+}
+
+.header .logo {
+  height: 34px;
+}
+.header .nav {
+  display: flex;
+}
+
+.header .nav a {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 15px 25px;
+}
+
+.user-actions {
+  display: flex;
+}
+
+.user-actions .actions-btn {
+  padding: 14px;
+  color: #fff;
+}
+.hero {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.hero h1 {
+  font-style: 2.4rem;
+}
+.breadcrumbs {
+  display: flex;
+}
+.breadcrumbs li {
+  display: flex;
+}
+.breadcrumbs li a {
+  display: flex;
+  text-decoration: none;
+}
+
+.breadcrumbs li + li::before {
+  content: "/";
+  padding: 0 5px;
+}
+/* side bar */
+.container-2 {
+  display: flex;
+
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+.sidebar {
+  width: 300px;
+  height: 1178px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.content {
+  width: 900px;
+  height: 1594px;
+}
+
+.search-form {
+  width: 270px;
+  height: 43px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.search-input {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  padding-right: 40px; /* Tạo khoảng cách cho nút */
+  padding-left: 20px;
+  position: relative;
+}
+
+.search-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.container-2 h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-left: 5px;
+}
+.sidebar-list {
+  width: 270px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+}
+.sidebar-list li a {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: normal;
+  text-decoration: none;
+  padding-left: 25px;
+  line-height: 40px;
+  color: #000000b3;
+}
+.sidebar-list li a:hover {
+  color: #783df0;
+}
+
+.sidebar-list li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+/* menu */
+.menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 7px;
+  margin-bottom: 60px;
+}
+.menu li a {
+  border-radius: 15px;
+  padding: 5px 14px;
+  margin: 0 9px 10px 9px;
+}
+.new {
+  background-color: #783df0;
+  color: #fff;
+}
+
+.menu a:not(.new):hover {
+  background-color: #783df0;
+  color: #fff;
+}
+
+.card {
+  width: 300px;
+  height: 472px;
+  border: 1px solid #eeeeee;
+}
+.card .text {
+  padding: 15px 20px 15px 25px;
+  margin-bottom: 30px;
+  line-height: 24px;
+}
+.course .card h3 {
+  font-weight: 700;
+  font-size: 18px;
+  color: #464646;
+  margin-bottom: 24px;
+}
+.course .card h3:hover {
+  color: #b80257;
+}
+.course .card p {
+  margin-bottom: 16px;
+}
+.tac-gia {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tac-gia a {
+  border-radius: 18px;
+  padding: 5px 14px;
+  margin: 4px 9px 10px 1px;
+  background-color: #783df0;
+  color: #fff;
+  font-weight: 600;
+}
+.tac-gia .price {
+  background-color: #b80257;
+  min-width: 62px;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+}
+.tac-gia img {
+  margin: -3px -21px 0px 3px;
+}
+.tac-gia span {
+  color: #00000099;
+}
+
+.course {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.page-number {
+  display: flex;
+  gap: 10px;
+}
+
+.page-number a {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: #00000099;
+  font-weight: 600;
+}
+.page-number .next {
+  background-color: #783df0;
+  color: #fff;
+  font-weight: 600;
+}
+.page-number .number-1 {
+  border-color: #783df0;
+}
+.number-2:hover,
+.number-3:hover {
+  border-color: #783df0;
+}
+
+.footer {
+  width: 100%;
+  height: 500px;
+  background-color: rgb(21 21 21);
+  margin-top: 250px;
+  padding: 80px 0 180px 0;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  align-items: baseline;
+}
+.footer .container .logo {
+  width: 350px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 24px;
+  font-size: 14px;
+}
+.footer .container .text {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.text-2 {
+  margin-top: 5px;
+}
+
+.footer .logo ul {
+  display: flex;
+  gap: 24px;
+}
+.scholars {
+  color: #fff;
+  /* width: 200px; */
+  color: rgba(255, 255, 255, 0.6);
+}
+h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+.ul-scholars {
+  margin-top: 26px;
+  line-height: 24px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ul-scholars a:hover {
+  color: #b80257;
+}
+.subscribe-us p {
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 24px;
+  line-height: 24px;
+  font-size: 14px;
+}
+.footer-email {
+  display: flex;
+  flex-direction: column;
+}
+.footer-input {
+  padding: 10px 20px;
+  width: 270px;
+ height: 40px; 
+ border: #464646;
+ border-radius: 25px;
+
+  background: #272727; */
+  /* /* margin: 25px 0 10px 0;  */
+}
+.footer-button {
+  margin-top: 10px;
+  width: 95px;
+  height: 40px;
+  background-color: #d81b60;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+.footer-button:hover {
+    background-color: #fff;
+    color: #b80257;
+}

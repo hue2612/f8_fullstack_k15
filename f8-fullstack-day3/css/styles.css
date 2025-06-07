@@ -335,3 +335,7 @@ a {
 .footer a {
   color: #17678a;
 }
+.content-sidebar-2 p:last-child {
+  padding: 10px;
+  text-align: center;
+}
