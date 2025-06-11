@@ -1,0 +1,45 @@
+body {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h1 {
+  padding: 16px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.sidebar {
+  width: 500px;
+  background-color: #ccc;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid rgb(0, 0, 0, 0.1);
+}
+
+.topic {
+  width: 470px;
+  padding: 16px;
+  font-size: 25px;
+  background-color: aqua;
+}
+
+.lesson {
+  padding: 24px;
+  line-height: 32px;
+}
+
+.topic {
+  position: sticky;
+  top: 0;
+}
