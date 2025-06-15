@@ -7,6 +7,10 @@
   --font-heading: "PT Sans", sans-serif;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
 html {
   font-size: 62.5%;
 }
@@ -150,6 +154,7 @@ h1 {
 .content {
   width: 900px;
   height: 1594px;
+  padding-left: 15px;
 }
 
 .search-form {
@@ -164,7 +169,7 @@ h1 {
   height: 100%;
   border-radius: 20px;
   border: 1px solid rgba(0, 0, 0, 0.09);
-  padding-right: 40px; /* Tạo khoảng cách cho nút */
+  padding-right: 40px;
   padding-left: 20px;
   position: relative;
 }
@@ -226,25 +231,86 @@ h1 {
 }
 
 .card {
-  width: 300px;
+  width: calc(100% / 3 - 30px);
+  margin-left: 30px;
   height: 472px;
   border: 1px solid #eeeeee;
 }
+
+.media {
+  width: 100%;
+  height: 212px;
+
+  overflow: hidden;
+}
+
 .card .text {
   padding: 15px 20px 15px 25px;
   margin-bottom: 30px;
   line-height: 24px;
 }
-.course .card h3 {
+
+.media img {
+  transition: all ease 0.5s;
+}
+.media {
+  position: relative;
+  z-index: 1;
+}
+
+.media i {
+  position: absolute;
+}
+.media-img-2 {
+  position: relative;
+}
+.media i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+  color: #fff;
+  font-size: 20px;
+}
+
+.media-img-2::before {
+  content: "";
+  position: absolute;
+  top: -52px;
+  right: -77px;
+  width: 140px;
+  height: 100px;
+  background-color: #d81b60;
+  z-index: 2;
+  transform: rotate(45deg);
+}
+
+.media:hover img {
+  scale: 1.1;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  gap: 30px 0;
+  margin-bottom: 24px;
+}
+
+.courses .card h3 {
+  width: 250px;
   font-weight: 700;
   font-size: 18px;
   color: #464646;
   margin-bottom: 24px;
+  transition: all ease-in-out 0.3s;
 }
-.course .card h3:hover {
+.courses .card h3:hover {
   color: #b80257;
 }
-.course .card p {
+.courses .card p {
   margin-bottom: 16px;
 }
 .tac-gia {
@@ -254,12 +320,14 @@ h1 {
 }
 
 .tac-gia a {
+  min-width: 66px;
   border-radius: 18px;
   padding: 5px 14px;
   margin: 4px 9px 10px 1px;
   background-color: #783df0;
   color: #fff;
   font-weight: 600;
+  cursor: pointer;
 }
 .tac-gia .price {
   background-color: #b80257;
@@ -269,16 +337,74 @@ h1 {
   font-weight: 600;
 }
 .tac-gia img {
-  margin: -3px -21px 0px 3px;
+  margin: -3px -6px 0px 3px;
 }
 .tac-gia span {
   color: #00000099;
 }
+.price {
+  scale: 1;
+  transition: all ease-in-out 0.3s;
+  position: relative;
+}
+.price::before {
+  display: inline-block;
+  position: absolute;
+  bottom: -15px;
+  right: 4px;
+  opacity: 0;
+  content: "";
+  width: 90%;
+  height: 10px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0) 80%
+  );
 
-.course {
-  display: flex;
-  gap: 30px;
-  margin-bottom: 30px;
+  transition: all ease-in-out 0.3s;
+  transition: 0.3s;
+}
+
+.price:hover {
+  transform: translate(0, -5px);
+}
+.price:hover::before {
+  opacity: 1;
+  transform: translate(0, 5px);
+}
+
+.btn-free {
+  position: relative;
+  transition: all ease-in-out 0.3s;
+}
+
+.btn-free::before {
+  display: inline-block;
+
+  position: absolute;
+  bottom: -13px;
+  right: 4px;
+
+  opacity: 0;
+  content: "";
+  width: 90%;
+  height: 10px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  transition: 0.3s;
+}
+
+.btn-free:hover {
+  transform: translate(0, -5px);
+}
+
+.btn-free:hover::before {
+  opacity: 1;
+  transform: translate(0, 5px);
 }
 .page-number {
   display: flex;
@@ -379,6 +505,7 @@ h4 {
 }
 
 .footer-button {
+  position: relative;
   margin-top: 10px;
   width: 95px;
   height: 40px;
@@ -389,11 +516,30 @@ h4 {
   cursor: pointer;
   letter-spacing: 1.5px;
   font-weight: 600;
+  transition: 0.1s;
 }
 
-.footer-button:hover {
+.footer-button::after {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: 25px;
+  content: "";
+  scale: 0;
   background-color: #fff;
   color: #b80257;
+  transition: 0.4s;
+}
+
+.footer-button span {
+  position: relative;
+  z-index: 1;
+}
+.footer-button:hover {
+  color: #b80257;
+}
+.footer-button:hover::after {
+  scale: 1;
 }
 
 .subscribe-us p {
@@ -425,16 +571,16 @@ h4 {
 
 .sub-menu {
   position: absolute;
-  display: none;
   background-color: #fff;
   width: 250px;
   margin-top: 20px;
   top: 100%;
   left: 0;
+  transform-origin: top center;
 }
 
 .nav > li:hover .sub-menu {
-  display: block;
+  scale: 1;
 }
 .sub-menu li:not(:last-child) {
   border-bottom: 2px solid #ccc;
@@ -490,4 +636,49 @@ h4 {
 }
 input[type="checkbox"]:checked ~ .active-search {
   display: flex;
+}
+
+.scroll-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  background-color: #b80257;
+  position: fixed;
+  bottom: 3px;
+  right: 0;
+}
+
+.scroll-top i {
+  color: #fff;
+  padding: 12px;
+}
+.tran-3s {
+  transition: all ease-in-out 0.5s;
+}
+
+.tran-3s:hover {
+  color: #783df0;
+}
+.home {
+  transition: all ease-in-out 0.3s;
+}
+
+.ul-scholars li a {
+  transition: all ease-in-out 0.3s;
+}
+
+.sidebar-list ul li a {
+  padding-left: 25px;
+  transition: all ease-in-out 0.3s;
+}
+
+.sidebar-list ul li:hover a {
+  padding-left: 40px;
+}
+
+.nav > li .sub-menu {
+  scale: 1 0;
+  transition: all ease-in-out 0.3s;
 }
