@@ -41,3 +41,280 @@ h5,
 h6 {
   font-family: var(--font-heading);
 }
+
+/* common */
+.container {
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top-page {
+  display: flex;
+  min-height: 496px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../img/bg-banner.jpg) no-repeat center / cover,
+    url(../img/bg-banner.jpg) no-repeat center / cover;
+}
+
+.top-page .inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+  margin-top: 40px;
+}
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.home:hover {
+  color: #783df0;
+}
+.header .logo {
+  height: 34px;
+}
+.header .nav {
+  display: flex;
+}
+
+.header .nav a {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 15px 25px;
+}
+
+.user-actions {
+  display: flex;
+}
+
+.user-actions .actions-btn {
+  padding: 14px;
+  color: #fff;
+}
+.hero {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.hero h1 {
+  font-style: 2.4rem;
+}
+.breadcrumbs {
+  display: flex;
+}
+.breadcrumbs li {
+  display: flex;
+}
+.breadcrumbs li a {
+  display: flex;
+  text-decoration: none;
+}
+
+.breadcrumbs li + li::before {
+  content: "/";
+  padding: 0 5px;
+}
+
+.subscribe-us p {
+  margin-bottom: 24px;
+}
+
+.nav > li {
+  position: relative;
+}
+.nav > li::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 20px;
+}
+
+.nav .sub-menu li a {
+  white-space: nowrap;
+  color: #666666;
+  line-height: 50px;
+  text-align: center;
+}
+
+.sub-menu {
+  position: absolute;
+  background-color: #fff;
+  width: 250px;
+  margin-top: 20px;
+  top: 100%;
+  left: 0;
+  transform-origin: top center;
+}
+
+.nav > li:hover .sub-menu {
+  scale: 1;
+}
+.sub-menu li:not(:last-child) {
+  border-bottom: 2px solid #ccc;
+}
+.nav .sub-menu li:hover {
+  background-color: #b80257;
+  color: #fff;
+}
+.nav .sub-menu li a:hover {
+  color: #fff;
+}
+
+.active-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+.active-search input {
+  width: 180px;
+  height: 40px;
+  border: 1px solid #ececec;
+}
+.active-search {
+  width: 200px;
+  height: 50px;
+  background-color: #fff;
+  position: relative;
+}
+.active-search i {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  color: #fff;
+  font-size: 15px;
+  background-color: #b80257;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.actions-btn {
+  position: relative;
+}
+
+.active-search {
+  position: absolute;
+  top: 35px;
+  right: -10px;
+  display: none;
+}
+input[type="checkbox"]:checked ~ .active-search {
+  display: flex;
+}
+
+.home {
+  transition: all ease-in-out 0.3s;
+}
+
+.ul-scholars li a {
+  transition: all ease-in-out 0.3s;
+}
+
+.sidebar-list ul li a {
+  padding-left: 25px;
+  transition: all ease-in-out 0.3s;
+}
+
+.sidebar-list ul li:hover a {
+  padding-left: 40px;
+}
+
+.nav > li .sub-menu {
+  scale: 1 0;
+  transition: all ease-in-out 0.3s;
+}
+.container {
+  display: flex;
+  height: 601px;
+  margin-top: 100px;
+  gap: 30px;
+}
+
+.img-1 img {
+  width: 670px;
+  height: 601px;
+}
+.img-2 {
+  position: relative;
+}
+
+.img-2 img {
+  width: 470px;
+  height: 601px;
+  object-fit: cover;
+}
+.img-2::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  inset: 0;
+  background-color: rgba(119, 60, 238, 0.85);
+  pointer-events: none;
+  z-index: 1;
+}
+.img-2 h2 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 200;
+  position: relative;
+}
+
+.img-2 h2::before {
+  content: "";
+  width: 120px;
+  height: 2px;
+  background: #f2b604;
+  position: absolute;
+  left: 0;
+  bottom: -16px;
+}
+.opacity {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  position: absolute;
+  top: 70px;
+  left: 70px;
+  z-index: 2;
+}
+.opacity ul {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.opacity ul li {
+  display: flex;
+
+  gap: 30px;
+}
+.opacity ul li i {
+  color: #fff;
+  font-size: 32px;
+}
+.opacity ul li p {
+  width: 250px;
+  font-size: 25px;
+  color: #fff;
+  font-weight: 600;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 35px;
+}
