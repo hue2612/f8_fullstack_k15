@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+.list {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.card {
+  width: 250px;
+  height: 350px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.5);
+}
+
+.avt {
+  overflow: hidden;
+}
+
+.avt img {
+  filter: grayscale(100%);
+  scale: 1;
+  transition: all ease-in-out 0.5s;
+}
+
+.card:hover img {
+  scale: 1.1;
+  filter: grayscale(0%);
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card h2 {
+  text-align: center;
+  margin-top: 24px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.card p {
+  margin-top: 24px;
+  text-align: center;
+  color: #474747;
+}
+
+.img-1 img {
+  filter: hue-rotate(220deg);
+}

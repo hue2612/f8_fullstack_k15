@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+.wrap-dot-1 {
+  display: flex;
+  gap: 30px;
+}
+.wrap-dot-2 {
+  display: flex;
+  gap: 30px;
+}
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #000;
+  transition: all linear 3s;
+}
+
+.wrap-dot-1 .dot {
+  animation: wrap-dot-1 ease-in-out 3s infinite;
+}
+
+.wrap-dot-2 .dot {
+  animation: wrap-dot-2 ease-in-out 3s infinite;
+}
+
+@keyframes wrap-dot-1 {
+  0%,
+  100% {
+    translate: 0;
+    opacity: 1;
+    scale: 1;
+  }
+  33% {
+    /* translate: 0 30px; */
+    opacity: 0.5;
+    scale: 1.5;
+  }
+  66% {
+    translate: 0 100px;
+    opacity: 0.3;
+    scale: 0.8;
+  }
+}
+
+@keyframes wrap-dot-2 {
+  0%,
+  100% {
+    translate: 0;
+    opacity: 1;
+    scale: 1;
+  }
+  33% {
+    /* translate: 0 -30px; */
+    opacity: 0.5;
+    scale: 1.5;
+  }
+  66% {
+    translate: 0 -100px;
+    opacity: 0.3;
+    scale: 0.8;
+  }
+}
+
+.wrap-dot-1 .dot:first-child,
+.wrap-dot-1 .dot:first-child {
+  animation-delay: 0s;
+}
+.wrap-dot-1 .dot:nth-child(2),
+.wrap-dot-2 .dot:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.wrap-dot-1 .dot:nth-child(3),
+.wrap-dot-2 .dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.wrap-dot-1 .dot:nth-child(4),
+.wrap-dot-2 .dot:nth-child(4) {
+  animation-delay: 0.9s;
+}
+.wrap-dot-1 .dot:nth-child(5),
+.wrap-dot-2 .dot:nth-child(5) {
+  animation-delay: 1.2s;
+}
+.wrap-dot-1 .dot:nth-child(6),
+.wrap-dot-2 .dot:nth-child(6) {
+  animation-delay: 1.5s;
+}
+.wrap-dot-1 .dot:nth-child(7),
+.wrap-dot-2 .dot:nth-child(7) {
+  animation-delay: 1.8s;
+}
