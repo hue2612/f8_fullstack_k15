@@ -1,0 +1,50 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+table {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  border: 1px solid;
+  padding: 10px;
+}
+
+table td:not(.text) {
+  text-align: end;
+}
+
+.text {
+  vertical-align: top;
+  text-align: left;
+}
+
+.text-1 {
+  line-height: 2;
+}
+div {
+  font-weight: 100;
+}
+
+.active {
+  margin: 0 45px;
+  width: 50px;
+  height: 20px;
+  text-align: center;
+  color: rgb(17, 104, 17);
+  border-radius: 2px;
+  background-color: #b3ffbd;
+}
+
+.not-found {
+  margin: 0 20px;
+  width: 100px;
+  height: 20px;
+  text-align: center;
+  color: rgb(177, 203, 33);
+  border-radius: 2px;
+  background-color: #f7ffaf;
+}
