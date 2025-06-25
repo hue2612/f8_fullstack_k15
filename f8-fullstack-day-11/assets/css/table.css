@@ -18,7 +18,7 @@ table td:not(.text) {
 }
 
 .text {
-  vertical-align: top;
+  /* vertical-align: top; */
   text-align: left;
 }
 
@@ -47,4 +47,20 @@ div {
   color: rgb(177, 203, 33);
   border-radius: 2px;
   background-color: #f7ffaf;
+}
+tbody.admit img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  translate: 0 9px;
+}
+tbody.admit tr td:first-child {
+  translate: 0 -8px;
+}
+tbody.admit tr:nth-child(even) {
+  background-color: #e7e7e7;
+}
+.thead {
+  background-color: #e7e7e7;
 }
