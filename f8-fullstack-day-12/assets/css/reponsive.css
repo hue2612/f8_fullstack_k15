@@ -90,6 +90,10 @@
   .footer .container .logo {
     width: 50% !important;
   }
+
+  .nav > li .sub-menu {
+    scale: 1;
+  }
 }
 
 /* xl */
