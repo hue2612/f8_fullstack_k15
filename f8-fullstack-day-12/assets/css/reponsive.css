@@ -56,6 +56,37 @@
   .header .nav li {
     padding: 0;
   }
+
+  .header .logo {
+    padding-left: 10px;
+  }
+  .open-nav {
+    padding-left: 32px;
+  }
+
+  .shop-page .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .row {
+    width: 100%;
+  }
+  .side-bar {
+    margin-top: 24px;
+  }
+  h4 {
+    color: #000000;
+  }
+  .footer .container {
+    flex-wrap: wrap;
+  }
+
+  .footer h4 {
+    color: #fff;
+  }
+  .footer .container .logo {
+    width: 50% !important;
+  }
 }
 
 /* xl */
