@@ -1,0 +1,98 @@
+/* sm */
+@media (max-width: 575.98px) {
+  ...;
+}
+
+/* md */
+@media (max-width: 767.98px) {
+  ...;
+}
+
+/* lg */
+@media (max-width: 991.98px) {
+  .header {
+    position: relative;
+  }
+  .header .nav {
+    flex-direction: column;
+    position: absolute;
+    top: 108px;
+    left: 24px;
+    width: 100%;
+    display: none;
+  }
+  .header .nav li {
+    width: 720px;
+    display: inline-block;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0 15px;
+    line-height: 45px;
+    font-weight: normal;
+  }
+  .header .nav > li {
+    background-color: #070403;
+    margin-top: -3px;
+  }
+  .header input[type="checkbox"]:checked ~ .nav {
+    display: block;
+  }
+  .nav {
+    z-index: 999;
+  }
+  .sub-menu {
+    /* display: none; */
+    width: 100%;
+    max-height: 0;
+    position: static;
+    overflow: hidden;
+    transition: all 3s ease-in-out;
+    margin: 0;
+  }
+
+  input[type="checkbox"]:checked + label + .sub-menu {
+    /* display: block; */
+    max-height: 500px;
+  }
+  .header .nav li {
+    padding: 0;
+  }
+}
+
+/* xl */
+@media (max-width: 1199.98px) {
+  .footer .container .logo {
+    width: 24%;
+  }
+
+  .scholars,
+  .product,
+  .support {
+    width: 16.67%;
+  }
+  .subscribe-us {
+    width: 25%;
+  }
+  .footer .container {
+    padding: 0 15px;
+  }
+
+  .side-bar {
+    width: 33.333%;
+  }
+  .card {
+    width: calc(50% - 15px);
+  }
+  .header .nav a {
+    padding: 15px;
+  }
+  .header {
+    padding: 0 10px;
+  }
+}
+
+/* xxl */
+@media (max-width: 1399.98px) {
+  .shop-page {
+    margin: 100px 15px;
+  }
+}
