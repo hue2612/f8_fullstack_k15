@@ -703,3 +703,7 @@ h4 {
 .tran-3s:hover {
   color: #783df0;
 }
+
+.nav .fa-angle-down {
+  display: none;
+}
